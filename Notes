@@ -1,0 +1,206 @@
+
+
+
+Optional <?>
+-------
+
+Java is purely object oriented programming lang
+
+which means in our day to day life, we are using objects to build logic
+
+
+
+when we say object it means,
+
+it contains either data, or null value
+
+
+
+if object contains data, we can execute our code
+but if it contains null values, it can lead to null pointer exceptions
+
+
+that is the common behavior we face in our day to day life in programming
+
+
+
+
+Why Optional?
+-------------
+
+class Customer{
+
+int id;
+String name;
+// Constructor
+// Getters & Setters
+}
+
+class Test{
+
+public static void main(String args[]){
+
+Customer customer1 = new Customer(101,"abc");
+customer1.getFiled()  --> will give data
+
+Customer customer2 = new Customer(101,null);
+ 
+ String name = customer2.getName() --> will give null
+
+// make upper case
+name.toUpperCase() --> will give NullPointerException
+
+}
+
+}
+
+
+
+
+
+----------------------------->
+
+How can we avoid Null pointer exception?
+
+
+
+we can do null check before accessing any object
+
+
+
+how could we know this particular getName() is giving null
+
+Here in this class. there are two fields, we can add null check for these two fields
+
+what if class contains hundreds of objects and attributes ..fields
+
+
+writing hundred null checks is not a good practice, so avoid these kind of scenarios
+or to avoid unpredictable null pointer exception
+
+
+java8 .. introduced one class .. Optional
+
+
+
+-->
+
+Before Optional class was introduced in java, these kind of null pointer exceptions and null
+issues are much more common in everyday programmers life
+
+
+Lets implement Optional with Java stream api
+
+
+
+
+
+--------->
+
+
+
+if we go to oracle offical page. ..  Optional.html.... we can find
+
+
+
+
+public final class Optional<T>
+
+
+contains lot of utility methods
+
+
+--> in static methods section...
+
+--> there are 3 methdos
+
+
+
+Static methods
+--------------->
+Static <T> Optional <T>      empty()
+
+Static <T> Optional <T>      of(T value)
+
+Static <T> Optional <T>     ofNullable(T value)
+
+--------------->
+
+
+
+
+
+
+these 3 methods are used for optional object creation
+
+
+
+
+Instance methods
+--------------->
+if we go to instance methods..
+we can find couple of methods...
+
+
+filter
+flatMap
+get
+ifPresent
+map
+orElse
+orElseget
+orElseThrow
+
+
+
+
+
+
+concrete methods
+---------------->
+similar methods..few more are like
+
+
+ifPresent
+ofNullable
+orElse
+orElseGet
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
